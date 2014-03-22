@@ -13,3 +13,10 @@ package.json
 
 # Thumbnail cache files
 ._*
+
+# Custom Pages and Folders
+js
+img
+fonts
+components.html
+marketing.html
