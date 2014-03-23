@@ -7,16 +7,21 @@
 # Node modules
 node_modules
 
-# Grunt
+# Grunt files
 Gruntfile.js
 package.json
 
-# Thumbnail cache files
-._*
+# LESS configs
+less/.*
 
-# Custom Pages and Folders
+# Custom files
+.*
+._*
+components.html
+marketing.html
+NOTES.md
+
+# Custom folders
 js
 img
 fonts
-components.html
-marketing.html

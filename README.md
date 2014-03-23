@@ -20,6 +20,11 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 * Remove all navbar collapsing and expanding behavior.
 * Remove the viewport ```<meta>``` from ```<head>``` section.
 
+### Dafault values
+* ```@container-width: ((970px + @grid-gutter-width));```
+* ```@icon-font-path: "../fonts/";```
+* ```@icon-font-name: "glyphicons-halflings-regular";```
+
 ### Override container width with CSS
 1. Open ```bootstrap.css``` file.
 2. Change the width on the ```.container```.
@@ -41,3 +46,11 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 3. ```@container-sm```
 4. ```@container-md```
 5. ```@container-lg```
+
+### Author
+
+** Artem Belov **
+
+* <http://www.artbelov.com/>
+* <https://github.com/artbelov>
+* <https://twitter.com/belov>
