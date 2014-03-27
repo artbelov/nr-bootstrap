@@ -7,7 +7,7 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 * Removed all responsive media queries.
 * Removed some responsive grid mixins.
 * Removed collapsing points.
-* Removed some [variables](#changes-in-less-variables).
+* Removed some responsive [variables](#changes-in-less-variables).
 
 ### Quick Start
 1. Clone repository or download it in ZIP file.
@@ -25,13 +25,13 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 * ```@icon-font-path: "../fonts/";```
 * ```@icon-font-name: "glyphicons-halflings-regular";```
 
-### Override container width with CSS
+### Override container width in CSS
 1. Open ```bootstrap.css``` file.
-2. Change the width on the ```.container```.
+2. Find and change the ```width``` of the ```.container``` class.
 
-### Override container width with LESS
+### Override container width in LESS
 1. Open ```bootstrap.less``` file.
-2. Change ```@container-width``` variable.
+2. Find and change ```@container-width``` variable.
 3. Compile ```bootstrap.less``` file.
 
 ### Changes in LESS Variables
