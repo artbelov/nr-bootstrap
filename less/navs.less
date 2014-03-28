@@ -2,6 +2,7 @@
 // Navs
 // --------------------------------------------------
 
+
 // Base class
 // --------------------------------------------------
 
@@ -9,11 +10,12 @@
   margin-bottom: 0;
   padding-left: 0; // Override default ul/ol
   list-style: none;
-  &:extend(.clearfix all)
-;
+  &:extend(.clearfix all);
+
   > li {
     position: relative;
     display: block;
+
     > a {
       position: relative;
       display: block;
@@ -28,6 +30,7 @@
     // Disabled state sets text to gray and nukes hover/tab effects
     &.disabled > a {
       color: @nav-disabled-link-color;
+
       &:hover,
       &:focus {
         color: @nav-disabled-link-hover-color;
@@ -65,6 +68,7 @@
   }
 }
 
+
 // Tabs
 // -------------------------
 
@@ -75,6 +79,7 @@
     float: left;
     // Make the list-items overlay the bottom border
     margin-bottom: -1px;
+
     // Actual tabs (as links)
     > a {
       margin-right: 2px;
@@ -106,11 +111,13 @@
   }
 }
 
+
 // Pills
 // -------------------------
 .nav-pills {
   > li {
     float: left;
+
     // Links rendered as pills
     > a {
       border-radius: @nav-pills-border-radius;
@@ -131,6 +138,7 @@
   }
 }
 
+
 // Stacked pills
 .nav-stacked {
   > li {
@@ -142,6 +150,7 @@
   }
 }
 
+
 // Nav variations
 // --------------------------------------------------
 
@@ -150,18 +159,6 @@
 
 .nav-justified {
   width: 100%;
-  > li {
-    float: none;
-    > a {
-      text-align: center;
-      margin-bottom: 5px;
-    }
-  }
-
-  > .dropdown .dropdown-menu {
-    top: auto;
-    left: auto;
-  }
 
   > li {
     display: table-cell;
@@ -171,6 +168,10 @@
     }
   }
 
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
 }
 
 // Move borders to anchors instead of bottom of list
@@ -178,17 +179,6 @@
 // Mixin for adding on top the shared `.nav-justified` styles for our tabs
 .nav-tabs-justified {
   border-bottom: 0;
-  > li > a {
-    // Override margin from .nav-tabs
-    margin-right: 0;
-    border-radius: @border-radius-base;
-  }
-
-  > .active > a,
-  > .active > a:hover,
-  > .active > a:focus {
-    border: 1px solid @nav-tabs-justified-link-border-color;
-  }
 
   > li > a {
     border-bottom: 1px solid @nav-tabs-justified-link-border-color;
@@ -199,8 +189,8 @@
   > .active > a:focus {
     border-bottom-color: @nav-tabs-justified-active-link-border-color;
   }
-
 }
+
 
 // Tabbable tabs
 // -------------------------
@@ -214,6 +204,7 @@
     display: block;
   }
 }
+
 
 // Dropdowns
 // -------------------------

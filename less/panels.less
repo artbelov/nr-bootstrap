@@ -2,20 +2,20 @@
 // Panels
 // --------------------------------------------------
 
+
 // Base class
 .panel {
   margin-bottom: @line-height-computed;
   background-color: @panel-bg;
   border: 1px solid transparent;
   border-radius: @panel-border-radius;
-  .box-shadow(0 1px 1px rgba(0, 0, 0, .05));
+  .box-shadow(0 1px 1px rgba(0,0,0,.05));
 }
 
 // Panel contents
 .panel-body {
   padding: @panel-body-padding;
-  &:extend(.clearfix all)
-;
+  &:extend(.clearfix all);
 }
 
 // Optional heading
@@ -23,6 +23,7 @@
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   .border-top-radius((@panel-border-radius - 1));
+
   > .dropdown .dropdown-toggle {
     color: inherit;
   }
@@ -34,6 +35,7 @@
   margin-bottom: 0;
   font-size: ceil((@font-size-base * 1.125));
   color: inherit;
+
   > a {
     color: inherit;
   }
@@ -47,6 +49,7 @@
   .border-bottom-radius((@panel-border-radius - 1));
 }
 
+
 // List groups in panels
 //
 // By default, space out list group content from panel headings to account for
@@ -55,6 +58,7 @@
 .panel {
   > .list-group {
     margin-bottom: 0;
+
     .list-group-item {
       border-width: 1px 0;
       border-radius: 0;
@@ -76,13 +80,13 @@
     }
   }
 }
-
 // Collapse space between when there's no additional content.
 .panel-heading + .list-group {
   .list-group-item:first-child {
     border-top-width: 0;
   }
 }
+
 
 // Tables in panels
 //
@@ -98,6 +102,7 @@
   > .table:first-child,
   > .table-responsive:first-child > .table:first-child {
     .border-top-radius((@panel-border-radius - 1));
+
     > thead:first-child,
     > tbody:first-child {
       > tr:first-child {
@@ -116,6 +121,7 @@
   > .table:last-child,
   > .table-responsive:last-child > .table:last-child {
     .border-bottom-radius((@panel-border-radius - 1));
+
     > tbody:last-child,
     > tfoot:last-child {
       > tr:last-child {
@@ -180,6 +186,7 @@
   }
 }
 
+
 // Collapsable panels (aka, accordion)
 //
 // Wrap a series of panels in `.panel-group` to turn them into an accordion with
@@ -187,6 +194,7 @@
 
 .panel-group {
   margin-bottom: @line-height-computed;
+
   // Tighten up margin so it's only between panels
   .panel {
     margin-bottom: 0;
@@ -211,27 +219,23 @@
   }
 }
 
+
 // Contextual variations
 .panel-default {
   .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
 }
-
 .panel-primary {
   .panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
 }
-
 .panel-success {
   .panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg; @panel-success-border);
 }
-
 .panel-info {
   .panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg; @panel-info-border);
 }
-
 .panel-warning {
   .panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg; @panel-warning-border);
 }
-
 .panel-danger {
   .panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
 }

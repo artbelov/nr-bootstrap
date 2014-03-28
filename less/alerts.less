@@ -2,6 +2,7 @@
 // Alerts
 // --------------------------------------------------
 
+
 // Base styles
 // -------------------------
 
@@ -10,6 +11,7 @@
   margin-bottom: @line-height-computed;
   border: 1px solid transparent;
   border-radius: @alert-border-radius;
+
   // Headings for larger alerts
   h4 {
     margin-top: 0;
@@ -36,7 +38,8 @@
 // Expand the right padding and account for the close button's positioning.
 
 .alert-dismissable {
-  padding-right: (@alert-padding + 20);
+ padding-right: (@alert-padding + 20);
+
   // Adjust close link position
   .close {
     position: relative;
@@ -53,15 +56,12 @@
 .alert-success {
   .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
 }
-
 .alert-info {
   .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
 }
-
 .alert-warning {
   .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
 }
-
 .alert-danger {
   .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
 }

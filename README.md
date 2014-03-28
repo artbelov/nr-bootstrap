@@ -22,8 +22,6 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 
 ### Dafault values
 * ```@container-width: ((970px + @grid-gutter-width));```
-* ```@icon-font-path: "../fonts/";```
-* ```@icon-font-name: "glyphicons-halflings-regular";```
 
 ### Override container width in CSS
 1. Open ```bootstrap.css``` file.
@@ -43,9 +41,8 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 
 1. ```@screen-*```
 2. ```@grid-float-*```
-3. ```@container-sm```
-4. ```@container-md```
-5. ```@container-lg```
+3. ```@container-*```
+
 
 ### Author
 

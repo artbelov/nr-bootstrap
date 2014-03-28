@@ -1,0 +1,35 @@
+{
+  "name": "non-responsive-bootstrap",
+  "description": "Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid width layout.",
+  "version": "3.1.1",
+  "author": "Artem Belov <artbelov@live.ru>",
+  "homepage": "http://artbelov.github.io/Non-responsive-Bootstrap/",
+  "style": "css/bootstrap.css",
+  "less": "less/bootstrap.less",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artbelov/Non-responsive-Bootstrap"
+  },
+  "bugs": {
+    "url": "https://github.com/artbelov/Non-responsive-Bootstrap/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-csscomb": "~2.0.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-cssmin": "~0.9.0"
+  }
+}
