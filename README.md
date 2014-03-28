@@ -1,4 +1,4 @@
-# Non-responsive Bootstrap [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# Non-responsive Bootstrap [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://api.travis-ci.org/artbelov/non-responsive-bootstrap.png)](https://travis-ci.org/artbelov/non-responsive-bootstrap)
 
 Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid width layout.
 
