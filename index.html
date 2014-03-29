@@ -1,115 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Non-responsive Bootstrap</title>
-    <!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <![endif]-->
-    <!-- Note there is no responsive meta tag here -->
-    <!-- Non-responsive Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="//cdn.jsdelivr.net/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        /*
-         * Base structure
-         */
-        html,
-        body {
-            height: 100%;
-        }
-        body {
-            text-align: center;
-        }
-        .site-wrapper {
-            display: table;
-            width: 100%;
-            height: 100%;
-            min-height: 100%;
-        }
-        .site-wrapper-inner {
-            display: table-cell;
-            vertical-align: top;
-        }
-        .cover-container {
-            margin-right: auto;
-            margin-left: auto;
+<meta charset="utf-8">
+<title>Non-responsive Bootstrap</title>
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<![endif]-->
+<!-- Note there is no responsive meta tag here -->
+<!-- Non-responsive Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+    /*global $:false */
+    $(document).ready(function($){
+
+        "use strict";
+
+        // Variables
+        var minval = 600;
+        var maxval = 1500;
+
+        // This button will increment the value
+        $('.qtyplus').click(function(e){
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var fieldName = $(this).data('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name='+fieldName+']').val());
+            // If is not undefined
+            if (!isNaN(currentVal)) {
+                // Increment
+                $('input[name='+fieldName+']').val(currentVal + 1);
+            } else {
+                // Otherwise put a minval there
+                $('input[name='+fieldName+']').val(minval);
+            }
+            // Change Container Width
+            changeWidth();
+        });
+
+        // This button will decrement the value till minval
+        $('.qtyminus').click(function(e) {
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var fieldName = $(this).data('field');
+            // Get its current value
+            var currentVal = parseInt($('input[name='+fieldName+']').val());
+            // If it isn't undefined or its greater than 0
+            if (!isNaN(currentVal) && currentVal > minval) {
+                // Decrement one
+                $('input[name='+fieldName+']').val(currentVal - 1);
+            } else {
+                // Otherwise put a minval
+                $('input[name='+fieldName+']').val(minval);
+            }
+            // Change Container Width
+            changeWidth();
+        });
+
+        // Disallow Characters in input
+        $('.qty').keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+                // Allow: Ctrl+A
+                    (e.keyCode == 65 && e.ctrlKey === true) ||
+                // Allow: home, end, left, right
+                    (e.keyCode >= 35 && e.keyCode <= 39)) {
+                // Let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        // On Blur Event
+        $('.qty').blur(function(){
+            // Get its current value
+            var currentVal = parseInt($(this).val());
+            // Check value
+            if (!isNaN(currentVal) && currentVal < minval) {
+                $(this).val(minval);
+            } else if (!isNaN(currentVal) && currentVal > maxval) {
+                $(this).val(maxval);
+            }
+            // Change Container Width
+            changeWidth();
+        });
+
+        // Change Width Function
+        function changeWidth() {
+            // Get value
+            var currentVal = parseInt($('.qty').val());
+            // Inject CSS
+            $('.masthead, .mastfoot, .cover-container').css('width', currentVal);
         }
 
-        /*
-         * Cover
-         */
-        .cover {
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-            background-color: #6f5499;
-            -webkit-border-radius: 15px;
-            -moz-border-radius: 15px;
-            border-radius: 15px;
-        }
-        .cover h1 {
-            font-size: 68px;
-            font-weight: bold;
-        }
-        .cover .lead {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            font-size: 30px;
-        }
-        .cover .btn-lg {
-            padding: 10px 20px;
-            font-weight: bold;
-            padding: 15px 30px;
-            font-size: 20px;
-            color: #6f5499;
-            background-color: #fff;
-        }
+    });
+</script>
+<style>
+    /*
+     * Base structure
+     */
+    html,
+    body {
+        height: 100%;
+    }
 
-        /*
-         * Footer
-         */
-        .mastfoot {
-            font-size: 16px;
-            padding-bottom: 15px;
-            color: #6f5499;
-        }
+    body {
+        text-align: center;
+        background: #f2efdc;
+        min-height: 580px;
+    }
 
-        /*
-         * Affix and center
-         */
-        .mastfoot {
-            position: fixed;
-            bottom: 0;
-        }
-        .site-wrapper-inner {
-            vertical-align: middle;
-        }
-        .mastfoot,
-        .cover-container {
-            width: 960px;
-        }
-    </style>
+    .site-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .site-wrapper-inner {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .cover-container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    /*
+     * Header
+     */
+    .masthead-brand {
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #404040;
+    }
+
+    .masthead-nav {
+        float: right;
+    }
+
+    .masthead-nav > li {
+        display: inline-block;
+    }
+
+    .masthead-nav > li + li {
+        margin-left: 20px;
+    }
+
+    .masthead-nav > li > a {
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #404040;
+        border-bottom: 2px solid transparent;
+    }
+
+    .masthead-nav > li > a:hover,
+    .masthead-nav > li > a:focus {
+        background: transparent;
+        border-bottom-color: #404040;
+    }
+
+
+    /*
+     * Cover
+     */
+    .cover {
+        color: #fff;
+        padding: 15px 30px 30px;
+        text-align: center;
+        background-color: #037e8c;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+    }
+
+    .cover h1 {
+        font-size: 72px;
+        font-weight: bold;
+    }
+
+    .cover .lead {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 30px;
+    }
+
+    .cover .btn-lg {
+        padding: 10px 20px;
+        font-weight: bold;
+        padding: 15px 30px;
+        font-size: 20px;
+        color: #404040;
+        background-color: #fff;
+    }
+
+    .cover .change-width {
+        margin: 30px auto 5px;
+        color: #fff;
+    }
+
+    .cover .change-width-form {
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .cover .qty {
+        text-align: center;
+        font-size: 20px;
+    }
+
+
+    /*
+     * Footer
+     */
+    .mastfoot {
+        font-weight: bold;
+        font-size: 16px;
+        padding: 15px 0;
+        color: #404040;
+    }
+
+    .mastfoot a {
+        color: #037e8c;
+    }
+
+
+    /*
+     * Affix and center
+     */
+    .masthead {
+        position: fixed;
+        top: 10px;
+    }
+
+    .mastfoot {
+        z-index: -1;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+
+    .masthead, .mastfoot, .cover-container {
+        width: 970px;
+    }
+</style>
 </head>
 <body>
 <div class="site-wrapper">
     <div class="site-wrapper-inner">
         <div class="cover-container">
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">NR-Bootstrap 3.1.1</h3>
+                    <ul class="nav masthead-nav">
+                        <li><a href="https://github.com/artbelov/non-responsive-bootstrap/">GitHub</a></li>
+                        <li><a href="http://www.artbelov.com/">Author</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="jumbotron cover">
                 <h1>Non-responsive Bootstrap</h1>
                 <p class="lead">Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid width layout.</p>
-                <a class="btn btn-lg btn-default" href="https://github.com/artbelov/Non-responsive-Bootstrap/">Download on GitHub</a>
+                <a class="btn btn-lg btn-default" href="https://github.com/artbelov/non-responsive-bootstrap/archive/master.zip"><i class="glyphicon glyphicon-cloud-download"></i> Download latest Release</a>
+                <small class="clearfix">Currently 3.1.1</small>
+                <p class="change-width">@container-width</p>
+                <div class="input-group change-width-form">
+                        <span class="input-group-btn">
+                            <button type="button" value="-" class="qtyminus btn btn-default" data-field="quantity">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                        </span>
+                    <input type="text" name="quantity" value="970" class="qty form-control"/>
+                        <span class="input-group-btn">
+                            <button type="button" value="+" class="qtyplus btn btn-default" data-field="quantity">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                </div>
             </div>
             <div class="mastfoot">
                 <p>© 2014 <a href="https://github.com/artbelov/Non-responsive-Bootstrap/">Non-responsive Bootstrap</a> by <a href="http://www.artbelov.com/">Artem Belov</a></p>
                 <p>Based on <a href="http://getbootstrap.com/">Bootstrap</a> by <a href="http://twitter.com/mdo">@mdo</a> and <a href="http://twitter.com/fat">@fat</a></p>
-                <p>Code licensed under MIT</p>
             </div>
         </div>
     </div>
 </div>
+<!-- Latest compiled and minified jQuery 1.X -->
+<script src="//cdn.jsdelivr.net/jquery/1.11.0/jquery.min.js"></script>
 </body>
 </html>
