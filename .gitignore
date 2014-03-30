@@ -1,0 +1,8 @@
+# Folder view configuration files
+.DS_Store
+
+# JetBrains IDE
+.idea
+
+# Node modules
+node_modules
