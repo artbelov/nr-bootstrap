@@ -1,10 +1,4 @@
-/*!
- * Non-responsive Bootstrap Gruntfile
- * Licensed under MIT
- */
-
 module.exports = function(grunt) {
-
   'use strict';
 
   // Force use of Unix newlines
@@ -17,6 +11,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+    banner:
+      '/*!\n' +
+      ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
+      ' * Homepage: <%= pkg.homepage %>\n' +
+      ' * Based on <%= pkg.based.name %> (<%= pkg.based.homepage %>)\n' +
+      ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+      ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+      ' */\n',
 
     // Task configuration
     less: {
@@ -29,8 +31,7 @@ module.exports = function(grunt) {
         options: {
           compress: false,
           sourceMap: true,
-          sourceMapFilename: 'css/bootstrap.css.map',
-          sourceMapRootpath: ''
+          sourceMapFilename: 'css/bootstrap.css.map'
         }
       },
       theme: {
@@ -84,6 +85,15 @@ module.exports = function(grunt) {
         src: 'css/bootstrap-theme.css'
       }
     },
+    usebanner: {
+      options: {
+        position: 'top',
+        banner: '<%= banner %>'
+      },
+      files: {
+        src: 'css/*.css'
+      }
+    },
     csscomb: {
       options: {
         config: 'less/.csscomb.json'
@@ -124,6 +134,7 @@ module.exports = function(grunt) {
   });
 
   // Load tasks
+  grunt.loadNpmTasks('grunt-banner');
   grunt.loadNpmTasks('grunt-csscomb');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -137,6 +148,7 @@ module.exports = function(grunt) {
     'clean',
     'less',
     'autoprefixer',
+    'usebanner',
     'csscomb',
     'cssmin',
     'csslint'
