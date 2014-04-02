@@ -4,8 +4,8 @@ $(document).ready(function ($) {
   "use strict";
 
   // Variables
-  var minval = 600;
-  var maxval = 1500;
+  var minval = 760;
+  var maxval = 1140;
 
   // This button will increment the value
   $('.qtyplus').click(function (e) {

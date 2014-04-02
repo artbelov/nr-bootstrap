@@ -79,7 +79,7 @@ body {
 }
 
 .cover h1 {
-    font-size: 82px;
+    font-size: 72px;
     font-weight: bold;
 }
 
@@ -99,6 +99,12 @@ body {
 .cover .btn-lg:hover, .cover .btn-lg:focus {
     color: #084a86;
     background-color: #fff;
+}
+
+.cover .version {
+    font-size: 12px;
+    margin: 10px auto 0;
+    color: #cccccc;
 }
 
 .cover .change-width-form {
