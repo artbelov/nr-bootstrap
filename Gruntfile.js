@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       '/*!\n' +
       ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
       ' * Homepage: <%= pkg.homepage %>\n' +
-      ' * Based on <%= pkg.based.name %> (<%= pkg.based.homepage %>)\n' +
+      ' * Based on Bootstrap (http://getbootstrap.com)\n' +
       ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
       ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
       ' */\n',

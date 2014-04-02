@@ -17,10 +17,6 @@
     "type": "MIT",
     "url": "http://opensource.org/licenses/MIT"
   },
-  "based": {
-    "name": "Bootstrap",
-    "homepage": "http://getbootstrap.com"
-  },
   "engines": {
     "node": ">= 0.10.0"
   },
