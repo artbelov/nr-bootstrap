@@ -11,7 +11,7 @@
     "framework",
     "web"
   ],
-  "homepage": "http://artbelov.github.io/Non-responsive-Bootstrap/",
+  "homepage": "http://www.artbelov.com/non-responsive-bootstrap/",
   "authors": [
     {
       "name": "Artem Belov",
@@ -20,7 +20,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/artbelov/Non-responsive-Bootstrap/issues"
+    "issues": "https://github.com/artbelov/non-responsive-bootstrap/issues"
   },
   "licenses": [
     {

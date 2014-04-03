@@ -15,7 +15,7 @@
 * Remove the viewport ```<meta>``` tag from ```<head>``` section.
 
 ### Default container width
-```@container-width``` = 970px + @grid-gutter-width = 1000px.
+@container-width = 970px + @grid-gutter-width = 1000px.
 
 ### Override width of container class
 

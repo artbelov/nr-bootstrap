@@ -2,16 +2,26 @@
   "name": "non-responsive-bootstrap",
   "description": "Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid layout.",
   "version": "3.1.1",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "fixed",
+    "fluid",
+    "front-end",
+    "framework",
+    "web"
+  ],
   "author": "Artem Belov",
   "homepage": "http://www.artbelov.com/non-responsive-bootstrap/",
   "style": "css/bootstrap.css",
   "less": "less/bootstrap.less",
   "repository": {
     "type": "git",
-    "url": "git://github.com/artbelov/Non-responsive-Bootstrap"
+    "url": "git://github.com/artbelov/non-responsive-bootstrap"
   },
   "bugs": {
-    "url": "https://github.com/artbelov/Non-responsive-Bootstrap/issues"
+    "url": "https://github.com/artbelov/non-responsive-bootstrap/issues"
   },
   "license": {
     "type": "MIT",
