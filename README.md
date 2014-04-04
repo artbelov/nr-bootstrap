@@ -2,7 +2,7 @@
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](http://img.shields.io/travis/artbelov/non-responsive-bootstrap/master.svg)](https://travis-ci.org/artbelov/non-responsive-bootstrap) [![devDependency Status](https://david-dm.org/artbelov/non-responsive-bootstrap/dev-status.png?theme=shields.io)](https://david-dm.org/artbelov/non-responsive-bootstrap#info=devDependencies)
 
-[Bootstrap](http://getbootstrap.com/) front-end framework without responsiveness, which can be used with fixed or fluid layout.
+Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid layout.
 
 ### Quick Start
 1. Clone the repository or download it in ZIP file.
@@ -19,12 +19,12 @@
 
 ### Override width of container class
 
-**In ```bootstrap.css```**
+**In ```bootstrap.css```:**
 
 1. Open ```bootstrap.css``` file.
 2. Find and change the ```width``` of the ```.container```.
 
-**In ```variables.less```**
+**In ```variables.less```:**
 
 1. Open ```variables.less``` file.
 2. Find and change ```@container-width``` variable.

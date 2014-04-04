@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   // Force use of Unix newlines
@@ -11,8 +11,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
-    banner:
-      '/*!\n' +
+    banner: '/*!\n' +
       ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
       ' * Homepage: <%= pkg.homepage %>\n' +
       ' * Based on Bootstrap (http://getbootstrap.com)\n' +
@@ -43,8 +42,7 @@ module.exports = function(grunt) {
         options: {
           compress: false,
           sourceMap: true,
-          sourceMapFilename: 'css/bootstrap-theme.css.map',
-          sourceMapRootpath: ''
+          sourceMapFilename: 'css/bootstrap-theme.css.map'
         }
       }
     },
@@ -129,32 +127,25 @@ module.exports = function(grunt) {
         src: 'css/bootstrap-theme.css',
         dest: 'css/bootstrap-theme.min.css'
       }
+    },
+    exec: {
+      npmUpdate: {
+        command: 'npm update'
+      }
     }
-
   });
 
-  // Load tasks
-  grunt.loadNpmTasks('grunt-banner');
-  grunt.loadNpmTasks('grunt-csscomb');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-csslint');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  // These plugins provide necessary tasks.
+  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+  require('time-grunt')(grunt);
 
-  // Register tasks
-  grunt.registerTask('default', [
-    'clean',
-    'less',
-    'autoprefixer',
-    'usebanner',
-    'csscomb',
-    'cssmin',
-    'csslint'
-  ]);
-  grunt.registerTask('dev', [
-    'watch'
-  ]);
+  // Default task for project build.
+  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
+
+  // Task for automatic project builds.
+  grunt.registerTask('dev', ['watch']);
+
+  // Task for updating the npm packages used by the Travis build.
+  grunt.registerTask('update', ['exec:npmUpdate']);
 
 };
