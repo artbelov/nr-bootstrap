@@ -8,7 +8,7 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 1. Clone the repository or download it in ZIP file.
 2. Add or replace CSS/LESS files in your project.
 3. [Override width](#override-width-of-container-class) of ```.container```  in ```variables.less``` or ```bootstrap.css```.
-4. Use only ```col-xs-*``` classes.
+4. Use only ```col-*``` classes.
 
 ### Common recommendations
 * Remove all navbar collapsing and expanding behavior.
