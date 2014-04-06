@@ -34,9 +34,9 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 
 **Artem Belov**
 
+- <http://www.artbelov.com>
 - <https://twitter.com/belov>
 - <http://github.com/artbelov>
-- <http://www.artbelov.com>
 
 ### Thanks
 

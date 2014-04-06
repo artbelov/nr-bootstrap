@@ -22,27 +22,36 @@ module.exports = function (grunt) {
     // Task configuration
     less: {
       core: {
-        files: {
-          'css/bootstrap.css': [
-            'less/bootstrap.less'
-          ]
-        },
         options: {
-          compress: false,
+          strictMath: true,
           sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'bootstrap.css.map',
           sourceMapFilename: 'css/bootstrap.css.map'
+        },
+        files: {
+          'css/bootstrap.css': ['less/bootstrap.less']
         }
       },
       theme: {
-        files: {
-          'css/bootstrap-theme.css': [
-            'less/theme.less'
-          ]
-        },
         options: {
-          compress: false,
+          strictMath: true,
           sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'bootstrap-theme.css.map',
           sourceMapFilename: 'css/bootstrap-theme.css.map'
+        },
+        files: {
+          'css/bootstrap-theme.css': ['less/theme.less']
+        }
+      },
+      minify: {
+        options: {
+          cleancss: true
+        },
+        files: {
+          'css/bootstrap.min.css': 'css/bootstrap.css',
+          'css/bootstrap-theme.min.css': 'css/bootstrap-theme.css'
         }
       }
     },
@@ -53,18 +62,6 @@ module.exports = function (grunt) {
         ],
         tasks: 'default'
       }
-    },
-    clean: {
-      core: [
-        'css/bootstrap.css',
-        'css/bootstrap.min.css',
-        'css/bootstrap.css.map'
-      ],
-      theme: [
-        'css/bootstrap-theme.css',
-        'css/bootstrap-theme.min.css',
-        'css/bootstrap-theme.css.map'
-      ]
     },
     autoprefixer: {
       options: {
@@ -96,7 +93,7 @@ module.exports = function (grunt) {
       options: {
         config: 'less/.csscomb.json'
       },
-      core: {
+      css: {
         expand: true,
         cwd: 'css/',
         src: ['*.css', '!*.min.css'],
@@ -112,22 +109,6 @@ module.exports = function (grunt) {
         'css/bootstrap-theme.css'
       ]
     },
-    cssmin: {
-      options: {
-        keepSpecialComments: '*',
-        noAdvanced: true,
-        report: 'min',
-        compatibility: 'ie8'
-      },
-      core: {
-        src: 'css/bootstrap.css',
-        dest: 'css/bootstrap.min.css'
-      },
-      theme: {
-        src: 'css/bootstrap-theme.css',
-        dest: 'css/bootstrap-theme.min.css'
-      }
-    },
     exec: {
       npmUpdate: {
         command: 'npm update'
@@ -140,7 +121,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task for project build.
-  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
+  grunt.registerTask('default', ['less:core', 'less:theme', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'csslint']);
 
   // Task for automatic project builds.
   grunt.registerTask('dev', ['watch']);
