@@ -1,0 +1,27 @@
+{
+  "name": "non-responsive-bootstrap",
+  "description": "Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid layout.",
+  "version": "3.1.1",
+  "keywords": [
+    "css",
+    "js",
+    "less",
+    "fixed",
+    "fluid",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://www.artbelov.com/non-responsive-bootstrap/",
+  "main": [
+    "css/bootstrap.css"
+  ],
+  "ignore": [
+    ".*",
+    "_config.yml",
+    "composer.json"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  }
+}
