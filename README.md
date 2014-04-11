@@ -19,16 +19,27 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 
 ### Override width of container class
 
-**In ```bootstrap.css```:**
+**In ```bootstrap.css```**
 
 1. Open ```bootstrap.css``` file.
 2. Find and change the ```width``` of the ```.container```.
 
-**In ```variables.less```:**
+**In ```variables.less```**
 
 1. Open ```variables.less``` file.
 2. Find and change ```@container-width``` variable.
 3. Compile ```bootstrap.less``` file.
+
+### Available Grunt commands
+
+#### Build – `grunt`
+Task for run tests locally and compile the CSS.
+
+#### Watch – `grunt watch`
+Task for watching LESS files and automatically building them on save.
+
+#### Update – `grunt update`
+Task for updating packages of the node package manager.
 
 ### Author
 

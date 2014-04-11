@@ -120,11 +120,11 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
   require('time-grunt')(grunt);
 
-  // Default task for project build.
+  // Default task for locally tests and compile the CSS.
   grunt.registerTask('default', ['less:core', 'less:theme', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'csslint']);
 
-  // Task for automatic project builds.
-  grunt.registerTask('dev', ['watch']);
+  // Task for watching Less files and automatically building them on save.
+  grunt.registerTask('watch', ['watch']);
 
   // Task for updating the npm packages used by the Travis build.
   grunt.registerTask('update', ['exec:npmUpdate']);
