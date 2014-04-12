@@ -7,28 +7,28 @@ Bootstrap front-end framework without responsiveness, which can be used with fix
 ### Quick Start
 1. Clone the repository or download it in ZIP file.
 2. Add or replace CSS/LESS files in your project.
-3. [Override width](#override-width-of-container-class) of ```.container```  in ```variables.less``` or ```bootstrap.css```.
-4. Use only ```col-*``` classes.
+3. [Override width](#override-width-of-container-class) of `.container`  in `variables.less` or `bootstrap.css`.
+4. Use only `col-*` grid classes.
 
 ### Common recommendations
 * Remove all navbar collapsing and expanding behavior.
-* Remove the viewport ```<meta>``` tag from ```<head>``` section.
+* Remove the viewport `<meta>` tag from `<head>` section.
 
 ### Default container width
-@container-width = 970px + @grid-gutter-width = 1000px.
+@container-width = 970px + @grid-gutter-width.
 
 ### Override width of container class
 
-**In ```bootstrap.css```**
+**In `bootstrap.css`**
 
-1. Open ```bootstrap.css``` file.
-2. Find and change the ```width``` of the ```.container```.
+1. Open `bootstrap.css` file.
+2. Find and change the `width` of the `.container`.
 
-**In ```variables.less```**
+**In `variables.less`**
 
-1. Open ```variables.less``` file.
-2. Find and change ```@container-width``` variable.
-3. Compile ```bootstrap.less``` file.
+1. Open `variables.less` file.
+2. Find and change `@container-width` variable.
+3. Compile `bootstrap.less` file.
 
 ### Available Grunt commands
 
