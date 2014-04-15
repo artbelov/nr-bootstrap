@@ -55,6 +55,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
     watch: {
       less: {
         files: [
@@ -63,6 +64,7 @@ module.exports = function (grunt) {
         tasks: 'default'
       }
     },
+
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
@@ -80,6 +82,7 @@ module.exports = function (grunt) {
         src: 'css/bootstrap-theme.css'
       }
     },
+
     usebanner: {
       options: {
         position: 'top',
@@ -89,6 +92,7 @@ module.exports = function (grunt) {
         src: 'css/*.css'
       }
     },
+
     csscomb: {
       options: {
         config: 'less/.csscomb.json'
@@ -100,6 +104,7 @@ module.exports = function (grunt) {
         dest: 'css/'
       }
     },
+
     csslint: {
       options: {
         csslintrc: 'less/.csslintrc'
@@ -109,6 +114,7 @@ module.exports = function (grunt) {
         'css/bootstrap-theme.css'
       ]
     },
+
     exec: {
       npmUpdate: {
         command: 'npm update'
