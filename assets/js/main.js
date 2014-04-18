@@ -2,25 +2,20 @@
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
  *
- * Only fires on body classes that match. If a body class contains a dash,
- * replace the dash with an underscore when adding it to the object below.
- *
  * .noConflict()
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-/*global $:false */
+/* global jQuery:false */
 
-(function($) {
+(function ($) {
 
-// Use this variable to set up the common and page specific functions.
-  var Roots = {
-    // All pages
+  'use strict';
+
+  var DOCS = {
     common: {
-
-      init: function() {
-        "use strict";
+      init: function () {
 
         // Variables
         var minval = 760;
@@ -111,17 +106,16 @@
 
   // The routing fires all common scripts, followed by the page specific scripts.
   var UTIL = {
-    fire: function(func, funcname, args) {
-      var namespace = Roots;
+    fire: function (func, funcname, args) {
+      var namespace = DOCS;
       funcname = (funcname === undefined) ? 'init' : funcname;
       if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
         namespace[func][funcname](args);
       }
     },
-    loadEvents: function() {
+    loadEvents: function () {
       UTIL.fire('common');
-
-      $.each(document.body.className.replace(/-/g, '_').split(/\s+/),function(i,classnm) {
+      $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function (classnm) {
         UTIL.fire(classnm);
       });
     }
@@ -129,4 +123,4 @@
 
   $(document).ready(UTIL.loadEvents);
 
-})(jQuery); // Fully reference jQuery after this point.
+})(jQuery);
