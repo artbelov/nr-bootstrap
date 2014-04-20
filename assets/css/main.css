@@ -1,3 +1,6 @@
+/**
+ * Global
+ */
 html,
 body
 {
@@ -5,6 +8,9 @@ body
 
     background-color: #fff;
 }
+/**
+ * Wrapper
+ */
 .site-wrapper
 {
     display: table;
@@ -25,6 +31,9 @@ body
     margin-right: auto;
     margin-left: auto;
 }
+/**
+ * Header
+ */
 .masthead-brand
 {
     font-size: 22px;
@@ -68,6 +77,9 @@ body
     border-bottom-color: #084a86;
     background: transparent;
 }
+/**
+ * Jumbotron
+ */
 .cover
 {
     padding: 10px 30px 30px;
@@ -124,6 +136,9 @@ body
     color: #084a86;
     background-color: #fff;
 }
+/**
+ * Footer
+ */
 .mastfoot
 {
     font-size: 16px;
@@ -137,10 +152,6 @@ body
     text-align: center;
 
     color: #6a758f;
-}
-.mastfoot a
-{
-    color: #465054;
 }
 .mastfoot a:hover,
 .mastfoot a:focus
