@@ -1,17 +1,26 @@
+/*!
+ * Non-resonseve Bootstrap's Gruntfile
+ * Copyright 2014 Artem Belov
+ * Licensed under MIT
+ */
+
 module.exports = function (grunt) {
   'use strict';
 
-  // Force use of Unix newlines
+  // Force use of Unix newlines.
   grunt.util.linefeed = '\n';
 
   RegExp.quote = function (string) {
     return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
   };
 
+  // Project configuration.
   grunt.initConfig({
 
+    // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*!\n' +
+    banner:
+      '/*!\n' +
       ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
       ' * Homepage: <%= pkg.homepage %>\n' +
       ' * Based on Bootstrap (http://getbootstrap.com)\n' +
@@ -19,7 +28,7 @@ module.exports = function (grunt) {
       ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
       ' */\n',
 
-    // Task configuration
+    // Task configuration.
     less: {
       core: {
         options: {
@@ -120,6 +129,7 @@ module.exports = function (grunt) {
         command: 'npm update'
       }
     }
+
   });
 
   // These plugins provide necessary tasks.
