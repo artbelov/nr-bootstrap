@@ -1,8 +1,9 @@
 /*!
- * Non-resonseve Bootstrap's Gruntfile
- * Copyright 2014 Artem Belov
- * Licensed under MIT
+ * Non-responsive Bootstrap's Gruntfile
  */
+
+/* jshint node: true */
+/* global module */
 
 module.exports = function (grunt) {
   'use strict';
