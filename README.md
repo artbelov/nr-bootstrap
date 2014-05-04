@@ -4,14 +4,14 @@
 
 **[Bootstrap](https://github.com/twitter/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.**
 
-### Quick Start
+### Quick start
 
-1. Clone the repository or download it in ZIP file.
+1. Clone the repository or download it in ZIP.
 2. Add or replace CSS/LESS files in your project.
-3. [Override width](#override-width-of-container-class) of `.container`  in `variables.less` or `bootstrap.css`.
+3. [Override width](#override-width-of-container) of `.container`  in `variables.less` or `bootstrap.css`.
 4. Use only `col-*` grid classes.
 
-### Common recommendations
+### Recommendations
 
 * Remove all navbar collapsing and expanding behavior.
 * Remove the viewport `<meta>` tag from `<head>` section.
@@ -20,7 +20,7 @@
 
 [@container-width](https://github.com/artbelov/non-responsive-bootstrap/blob/master/less/variables.less#L11) = 970px + @grid-gutter-width.
 
-### Override width of container class
+### Override width of container
 
 **In `bootstrap.css`:**
 
@@ -54,7 +54,7 @@ Task for updating packages of the node package manager.
 
 ### Thanks
 
-[Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twitter/bootstrap).
+[Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
 ### Author
 
