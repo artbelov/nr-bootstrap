@@ -18,7 +18,7 @@
 
 ### Default container width
 
-[@container-width](https://github.com/artbelov/non-responsive-bootstrap/blob/master/less/variables.less#L11) = 970px + @grid-gutter-width.
+[@container-default](https://github.com/artbelov/non-responsive-bootstrap/blob/master/less/variables.less#L304) = 970px + @grid-gutter-width.
 
 ### Override width of container
 
@@ -30,7 +30,7 @@
 **In `variables.less`:**
 
 1. Open `variables.less` file.
-2. Find and change `@container-width` variable.
+2. Find and change `@container-default` variable.
 3. Compile `bootstrap.less` file.
 
 **In own styles:**
