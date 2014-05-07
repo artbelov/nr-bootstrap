@@ -1,8 +1,9 @@
 /*!
- * Non-resonseve Bootstrap's Gruntfile
- * Copyright 2014 Artem Belov
- * Licensed under MIT
+ * Non-responsive Bootstrap's Gruntfile
  */
+
+/* jshint node: true */
+/* global module */
 
 module.exports = function (grunt) {
   'use strict';
@@ -21,12 +22,12 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     banner:
       '/*!\n' +
-        ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
-        ' * Homepage: <%= pkg.homepage %>\n' +
-        ' * Based on Bootstrap (http://getbootstrap.com)\n' +
-        ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-        ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
-        ' */\n',
+      ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
+      ' * Homepage: <%= pkg.homepage %>\n' +
+      ' * Based on Bootstrap (http://getbootstrap.com)\n' +
+      ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+      ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+      ' */\n',
 
     // Task configuration.
     less: {

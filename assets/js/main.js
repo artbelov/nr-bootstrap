@@ -86,6 +86,12 @@
     function changeWidth() {
       // Get value
       var currentVal = parseInt($('.qty').val());
+      // Check value
+      if (!isNaN(currentVal) && currentVal < minval) {
+        $(this).val(minval);
+      } else if (!isNaN(currentVal) && currentVal > maxval) {
+        $(this).val(maxval);
+      }
       // Inject CSS
       $('.masthead, .mastfoot, .cover-container').css('width', currentVal);
     }
