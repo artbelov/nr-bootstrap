@@ -1,54 +1,55 @@
+/*!
+ * Non-responsive Bootstrap v3.1.1
+ * Homepage: http://www.artbelov.com/non-responsive-bootstrap/
+ * Based on Bootstrap (http://getbootstrap.com)
+ * Copyright 2014 Artem Belov
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+
 /* global jQuery:false */
 
 (function ($, window, document, undefined) {
 
   'use strict';
 
-  // Change Width Function
+  // Change Width of Container
   $(function () {
 
-    // Variables
-    var minval = 760;
-    var maxval = 1140;
+    // Set Uo Values
+    var step = 10,
+      minval = 800,
+      maxval = 1140;
+
+    // Change Width Function
+    function changeWidth(width) {
+      // Set value
+      $('.qty').val(width);
+      // Inject CSS
+      $('.cover-container, .masthead, .mastfoot').css('width', width);
+    }
 
     // This button will increment the value
-    $('.qtyplus').click(function (e) {
+    $('.qtyplus, .qtyminus').click(function (e) {
+      // Get current value
+      var curVal = parseInt($('.qty').val());
       // Stop acting like a button
       e.preventDefault();
-      // Get the field name
-      var fieldName = $(this).data('field');
-      // Get its current value
-      var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-      // If is not undefined
-      if (!isNaN(currentVal)) {
-        // Increment
-        $('input[name=' + fieldName + ']').val(currentVal + 10);
-      } else {
+      // If is correct number
+      if (!isNaN(curVal) && curVal >= minval && curVal <= maxval) {
+        if ($(this).hasClass('qtyplus') && curVal < maxval) {
+          // Increment
+          changeWidth(curVal + step);
+        } else if ($(this).hasClass('qtyminus') && curVal > minval) {
+          // Decrement
+          changeWidth(curVal - step);
+        }
+      } else if (!isNaN(curVal) && curVal > maxval) {
+        // Otherwise put a maxval there
+        changeWidth(maxval);
+      } else if (!isNaN(curVal) && curVal < minval) {
         // Otherwise put a minval there
-        $('input[name=' + fieldName + ']').val(minval);
+        changeWidth(minval);
       }
-      // Change Container Width
-      changeWidth();
-    });
-
-    // This button will decrement the value till minval
-    $('.qtyminus').click(function (e) {
-      // Stop acting like a button
-      e.preventDefault();
-      // Get the field name
-      var fieldName = $(this).data('field');
-      // Get its current value
-      var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-      // If it isn't undefined or its greater than 0
-      if (!isNaN(currentVal) && currentVal > minval) {
-        // Decrement one
-        $('input[name=' + fieldName + ']').val(currentVal - 10);
-      } else {
-        // Otherwise put a minval
-        $('input[name=' + fieldName + ']').val(minval);
-      }
-      // Change Container Width
-      changeWidth();
     });
 
     // Disallow Characters in input
@@ -71,30 +72,16 @@
     // On Blur Event
     $('.qty').blur(function () {
       // Get its current value
-      var currentVal = parseInt($(this).val());
-      // Check value
-      if (!isNaN(currentVal) && currentVal < minval) {
-        $(this).val(minval);
-      } else if (!isNaN(currentVal) && currentVal > maxval) {
-        $(this).val(maxval);
+      var curVal = parseInt($(this).val());
+      // Check current value
+      if (!isNaN(curVal) && curVal > minval && curVal < maxval) {
+        changeWidth(curVal);
+      } else if (!isNaN(curVal) && curVal < minval) {
+        changeWidth(minval);
+      } else if (!isNaN(curVal) && curVal > maxval) {
+        changeWidth(maxval);
       }
-      // Change Container Width
-      changeWidth();
     });
-
-    // Change Width Function
-    function changeWidth() {
-      // Get value
-      var currentVal = parseInt($('.qty').val());
-      // Check value
-      if (!isNaN(currentVal) && currentVal < minval) {
-        $(this).val(minval);
-      } else if (!isNaN(currentVal) && currentVal > maxval) {
-        $(this).val(maxval);
-      }
-      // Inject CSS
-      $('.masthead, .mastfoot, .cover-container').css('width', currentVal);
-    }
 
   });
 
