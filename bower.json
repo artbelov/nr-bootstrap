@@ -2,6 +2,12 @@
   "name": "nr-bootstrap",
   "description": "Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid layout.",
   "version": "3.1.1",
+  "homepage": "http://www.artbelov.com/nr-bootstrap/",
+  "author": "Artem Belov",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/artbelov/nr-bootstrap.git"
+  },
   "keywords": [
     "css",
     "js",
@@ -12,15 +18,16 @@
     "framework",
     "web"
   ],
-  "homepage": "http://www.artbelov.com/nr-bootstrap/",
   "main": [
     "css/bootstrap.css"
   ],
   "ignore": [
     ".*",
-    "composer.json"
+    "composer.json",
+    "Gruntfile.js",
+    "package.json"
   ],
-  "dependencies": {
-    "jquery": ">= 1.9.0"
+  "devDependencies": {
+    "font-awesome": "~4.0.0"
   }
 }
