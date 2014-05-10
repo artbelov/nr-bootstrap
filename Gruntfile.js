@@ -43,25 +43,12 @@ module.exports = function (grunt) {
           'css/bootstrap.css': ['less/bootstrap.less']
         }
       },
-      theme: {
-        options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: 'bootstrap-theme.css.map',
-          sourceMapFilename: 'css/bootstrap-theme.css.map'
-        },
-        files: {
-          'css/bootstrap-theme.css': ['less/theme.less']
-        }
-      },
       minify: {
         options: {
           cleancss: true
         },
         files: {
-          'css/bootstrap.min.css': 'css/bootstrap.css',
-          'css/bootstrap-theme.min.css': 'css/bootstrap-theme.css'
+          'css/bootstrap.min.css': 'css/bootstrap.css'
         }
       }
     },
@@ -84,12 +71,6 @@ module.exports = function (grunt) {
           map: true
         },
         src: 'css/bootstrap.css'
-      },
-      theme: {
-        options: {
-          map: true
-        },
-        src: 'css/bootstrap-theme.css'
       }
     },
 
@@ -120,8 +101,7 @@ module.exports = function (grunt) {
         csslintrc: 'less/.csslintrc'
       },
       src: [
-        'css/bootstrap.css',
-        'css/bootstrap-theme.css'
+        'css/bootstrap.css'
       ]
     },
 
@@ -138,10 +118,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task for locally tests and compile the CSS.
-  grunt.registerTask('default', ['less:core', 'less:theme', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'csslint']);
-
-  // Task for watching Less files and automatically building them on save.
-  grunt.registerTask('watch', ['watch']);
+  grunt.registerTask('default', ['less:core', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'csslint']);
 
   // Task for updating the npm packages used by the Travis build.
   grunt.registerTask('update', ['exec:npmUpdate']);
