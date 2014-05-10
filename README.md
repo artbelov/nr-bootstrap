@@ -1,6 +1,6 @@
-# [Non-responsive Bootstrap](http://www.artbelov.com/non-responsive-bootstrap/)
+# [Non-responsive Bootstrap](http://www.artbelov.com/nr-bootstrap/)
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](http://img.shields.io/travis/artbelov/non-responsive-bootstrap/master.svg)](https://travis-ci.org/artbelov/non-responsive-bootstrap) [![devDependency Status](https://david-dm.org/artbelov/non-responsive-bootstrap/dev-status.png?theme=shields.io)](https://david-dm.org/artbelov/non-responsive-bootstrap#info=devDependencies)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](http://img.shields.io/travis/artbelov/nr-bootstrap/master.svg)](https://travis-ci.org/artbelov/nr-bootstrap) [![devDependency Status](https://david-dm.org/artbelov/nr-bootstrap/dev-status.png?theme=shields.io)](https://david-dm.org/artbelov/nr-bootstrap#info=devDependencies)
 
 **[Bootstrap](https://github.com/twitter/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.**
 
@@ -18,7 +18,7 @@
 
 ### Default container width
 
-[@container-default](https://github.com/artbelov/non-responsive-bootstrap/blob/master/less/variables.less#L304) = 970px + @grid-gutter-width.
+[@container-default](https://github.com/artbelov/nr-bootstrap/blob/master/less/variables.less#L304) = 970px + @grid-gutter-width.
 
 ### Override width of container
 
