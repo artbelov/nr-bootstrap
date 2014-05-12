@@ -2,7 +2,7 @@
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](http://img.shields.io/travis/artbelov/nr-bootstrap/master.svg)](https://travis-ci.org/artbelov/nr-bootstrap) [![devDependency Status](https://david-dm.org/artbelov/nr-bootstrap/dev-status.png?theme=shields.io)](https://david-dm.org/artbelov/nr-bootstrap#info=devDependencies)
 
-**[Bootstrap](https://github.com/twitter/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.**
+**[Bootstrap](https://github.com/twbs/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.**
 
 ### Quick start
 
@@ -16,9 +16,11 @@
 * Remove all navbar collapsing and expanding behavior.
 * Remove the viewport `<meta>` tag from `<head>` section.
 
-### Default container width
+### Default values ​​of extra LESS variables
 
-[@container-default](https://github.com/artbelov/nr-bootstrap/blob/master/less/variables.less#L304) = 970px + @grid-gutter-width.
+[Container width](https://github.com/artbelov/nr-bootstrap/blob/master/less/variables.less#L304): ((970px + @grid-gutter-width));
+
+[Glyphicons path](https://github.com/artbelov/nr-bootstrap/blob/master/less/variables.less#L75): "../fonts/";
 
 ### Override width of container
 
