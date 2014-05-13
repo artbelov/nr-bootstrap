@@ -39,9 +39,14 @@
       }
     });
 
-    // Plus-Minus Buttons and Width Input
-    $('.qty, .qtyplus, .qtyminus').on('click blur', function () {
+    // Plus-Minus Buttons
+    $('.qtyplus, .qtyminus').on('click', function () {
       changeWidth(parseInt($('.qty').val()), $(this).hasClass('qtyplus'), $(this).hasClass('qtyminus'));
+    });
+
+    // Width Input
+    $('.qty').on('blur', function () {
+      changeWidth(parseInt($('.qty').val()));
     });
 
     // Disallow Characters in Width Input
