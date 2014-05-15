@@ -34,7 +34,7 @@ module.exports = function (grunt) {
       docs: {
         options: {
           strictMath: true,
-          sourceMap: true,
+          sourceMap: false,
           outputSourceFiles: true,
           sourceMapURL: 'main.css.map',
           sourceMapFilename: 'assets/css/main.css.map'
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
       },
       docs: {
         options: {
-          map: true
+          map: undefined
         },
         src: 'assets/css/main.css'
       }
