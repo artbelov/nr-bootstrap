@@ -14,7 +14,12 @@
   $(function () {
 
     // Set Default Values
-    var step = 10, minval = 800, maxval = 1140;
+    var step = 10, minVal = 800, maxVal = 1140, viewPort = $(window).width(), scrollBar = 20;
+    
+    // Set Maximum Container Width
+    if (viewPort < maxVal) {
+      maxVal = Math.floor(viewPort / 100) * 100 - scrollBar;
+    }
 
     // Change Width Function
     var changeWidth = (function (width, qtyplus, qtyminus) {
@@ -25,14 +30,14 @@
       });
       // If is correct number
       if (!isNaN(width)) {
-        if (qtyplus && width < maxval) {
+        if (qtyplus && width < maxVal) {
           setVal(width + step);
-        } else if (qtyminus && width > minval) {
+        } else if (qtyminus && width > minVal) {
           setVal(width - step);
-        } else if (width > maxval) {
-          setVal(maxval);
-        } else if (width < minval) {
-          setVal(minval);
+        } else if (width > maxVal) {
+          setVal(maxVal);
+        } else if (width < minVal) {
+          setVal(minVal);
         } else {
           setVal(width);
         }
