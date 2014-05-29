@@ -103,12 +103,6 @@ module.exports = function (grunt) {
       src: [
         'css/bootstrap.css'
       ]
-    },
-
-    exec: {
-      npmUpdate: {
-        command: 'npm update'
-      }
     }
 
   });
@@ -119,8 +113,5 @@ module.exports = function (grunt) {
 
   // Default task for locally tests and compile the CSS.
   grunt.registerTask('default', ['less:core', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'csslint']);
-
-  // Task for updating the npm packages used by the Travis build.
-  grunt.registerTask('update', ['exec:npmUpdate']);
 
 };
