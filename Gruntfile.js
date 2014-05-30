@@ -93,12 +93,6 @@ module.exports = function (grunt) {
       src: [
         'assets/css/main.css'
       ]
-    },
-
-    exec: {
-      npmUpdate: {
-        command: 'npm update'
-      }
     }
 
   });
@@ -112,8 +106,5 @@ module.exports = function (grunt) {
 
   // Task for watching Less files and automatically building them on save.
   grunt.registerTask('watch', ['watch']);
-
-  // Task for updating the npm packages used by the Travis build.
-  grunt.registerTask('update', ['exec:npmUpdate']);
 
 };
