@@ -7,6 +7,13 @@ html, body {
 }
 
 /**
+ * Default Width
+ */
+#mastfoot, #cover-container {
+  width: 970px;
+}
+
+/**
  * Wrapper
  */
 .site-wrapper {
@@ -22,7 +29,7 @@ html, body {
   vertical-align: middle;
 }
 
-.cover-container {
+#cover-container {
   margin-right: auto;
   margin-left: auto;
 }
@@ -38,6 +45,10 @@ html, body {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  #qty {
+    text-align: center;
+    font-size: 20px;
+  }
   h1 {
     font-size: 72px;
     font-weight: bold;
@@ -62,10 +73,6 @@ html, body {
     width: 140px;
     margin: 30px auto 0;
   }
-  .qty {
-    text-align: center;
-    font-size: 20px;
-  }
 }
 
 .cover .btn-lg:hover, .cover .btn-lg:focus {
@@ -76,7 +83,7 @@ html, body {
 /**
  * Footer
  */
-.mastfoot {
+#mastfoot {
   text-align: center;
   font-weight: bold;
   font-size: 16px;
@@ -86,11 +93,6 @@ html, body {
   bottom: 0;
 }
 
-.mastfoot a:hover, .mastfoot a:focus {
+#mastfoot a:hover, #mastfoot a:focus {
   color: #084a86;
 }
-
-.masthead, .mastfoot, .cover-container {
-  width: 970px;
-}
-

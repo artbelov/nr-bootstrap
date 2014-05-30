@@ -28,7 +28,7 @@
 <![endif]-->
 <div class="site-wrapper">
   <div class="site-wrapper-inner">
-    <div class="cover-container">
+    <div id="cover-container">
       <div class="jumbotron cover">
         <h1>Non-responsive Bootstrap</h1>
         <p class="lead">Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid width layout.</p>
@@ -36,19 +36,19 @@
         <p class="version">Currently v3.1.1</p>
         <div class="input-group input-group-sm change-width-form">
           <span class="input-group-btn">
-            <button type="button" value="-" class="qtyminus btn btn-primary" data-field="quantity">
+            <button type="button" value="-" id="qtyminus" class="btn btn-primary" data-field="quantity">
               <span class="glyphicon glyphicon-minus"></span>
             </button>
           </span>
-          <input type="text" name="quantity" value="970" class="qty form-control">
+          <input type="text" name="quantity" value="970" id="qty" class="form-control">
           <span class="input-group-btn">
-            <button type="button" value="+" class="qtyplus btn btn-primary" data-field="quantity">
+            <button type="button" value="+" id="qtyplus" class="btn btn-primary" data-field="quantity">
               <span class="glyphicon glyphicon-plus"></span>
             </button>
           </span>
         </div>
       </div>
-      <div class="mastfoot">
+      <div id="mastfoot">
         <p>© 2014 <a href="https://github.com/artbelov/nr-bootstrap/" rel="nofollow">Non-responsive Bootstrap</a> by <a href="http://www.artbelov.com/">Artem Belov</a></p>
         <p>Based on <a href="http://getbootstrap.com/" rel="nofollow">Bootstrap</a> by <a href="http://twitter.com/mdo" rel="nofollow">@mdo</a> and <a href="http://twitter.com/fat" rel="nofollow">@fat</a></p>
       </div>
@@ -56,8 +56,6 @@
   </div>
 </div>
 <!-- JavaScript -->
-<script src="assets/js/vendor/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
