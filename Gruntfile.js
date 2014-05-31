@@ -20,8 +20,7 @@ module.exports = function (grunt) {
 
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner:
-      '/*!\n' +
+    banner: '/*!\n' +
       ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
       ' * Homepage: <%= pkg.homepage %>\n' +
       ' * Based on Bootstrap (http://getbootstrap.com)\n' +
@@ -41,14 +40,6 @@ module.exports = function (grunt) {
         },
         files: {
           'css/bootstrap.css': ['less/bootstrap.less']
-        }
-      },
-      minify: {
-        options: {
-          cleancss: true
-        },
-        files: {
-          'css/bootstrap.min.css': 'css/bootstrap.css'
         }
       }
     },
@@ -96,6 +87,18 @@ module.exports = function (grunt) {
       }
     },
 
+    cssmin: {
+      options: {
+        compatibility: 'ie8',
+        keepSpecialComments: '*'
+      },
+      core: {
+        files: {
+          'css/bootstrap.min.css': 'css/bootstrap.css'
+        }
+      }
+    },
+
     csslint: {
       options: {
         csslintrc: 'less/.csslintrc'
@@ -112,6 +115,6 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task for locally tests and compile the CSS.
-  grunt.registerTask('default', ['less:core', 'autoprefixer', 'usebanner', 'csscomb', 'less:minify', 'csslint']);
+  grunt.registerTask('default', ['less:core', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
 
 };
