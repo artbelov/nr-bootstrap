@@ -20,8 +20,7 @@ module.exports = function (grunt) {
 
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner:
-      '/*!\n' +
+    banner: '/*!\n' +
       ' * Non-responsive Bootstrap v<%= pkg.version %>\n' +
       ' * Homepage: <%= pkg.homepage %>\n' +
       ' * Based on Bootstrap (http://getbootstrap.com)\n' +
@@ -34,21 +33,10 @@ module.exports = function (grunt) {
       docs: {
         options: {
           strictMath: true,
-          sourceMap: false,
-          outputSourceFiles: true,
-          sourceMapURL: 'main.css.map',
-          sourceMapFilename: 'assets/css/main.css.map'
+          outputSourceFiles: true
         },
         files: {
           'assets/css/main.css': ['assets/less/main.less']
-        }
-      },
-      minify: {
-        options: {
-          cleancss: true
-        },
-        files: {
-          'assets/css/main.min.css': 'assets/css/main.css'
         }
       }
     },
@@ -86,6 +74,18 @@ module.exports = function (grunt) {
       }
     },
 
+    cssmin: {
+      options: {
+        compatibility: 'ie8',
+        keepSpecialComments: '*'
+      },
+      core: {
+        files: {
+          'assets/css/main.min.css': 'assets/css/main.css'
+        }
+      }
+    },
+
     csslint: {
       options: {
         csslintrc: 'assets/less/.csslintrc'
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task for locally tests and compile the CSS.
-  grunt.registerTask('default', ['less:docs', 'autoprefixer', 'csscomb', 'less:minify', 'csslint']);
+  grunt.registerTask('default', ['less:docs', 'autoprefixer', 'csscomb', 'cssmin', 'csslint']);
 
   // Task for watching Less files and automatically building them on save.
   grunt.registerTask('watch', ['watch']);
