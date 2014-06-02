@@ -4,12 +4,12 @@
  * Copyright 2014 Artem Belov
  */
 
-// Set Default Values
+// Set Default Values and Variables
 var step = 10,
   minVal = 800,
   maxVal = 1200,
   scrollBar = 20,
-  viewPort = screen.width,
+  screenWidth = screen.width,
   qtyEl = document.getElementById('qty'),
   qtyPlusEl = document.getElementById('qtyplus'),
   qtyMinusEl = document.getElementById('qtyminus'),
@@ -18,8 +18,8 @@ var step = 10,
 
 
 // Set Maximum Container Width
-if (viewPort < maxVal) {
-  maxVal = Math.floor(viewPort / 100) * 100 - scrollBar;
+if (screenWidth < maxVal) {
+  maxVal = Math.floor(screenWidth / 100) * 100 - scrollBar;
 }
 
 // Change Container Width Function
@@ -56,20 +56,19 @@ qtyPlusEl.onclick = function (e) {
   changeWidth(parseInt(qtyEl.value), e.target.id, e.target.parentElement.id);
 };
 
-// Width Input
-qtyEl.onblur = function () {
-  changeWidth(qtyEl.value);
-};
-
 // Disallow Characters in Width Input
 qtyEl.onkeydown = function (e) {
-  // Allow keys: backspace, end, home, left, right, delete and Ctrl+A
-  var allowKeys = [8, 35, 36, 37, 39, 46];
-  if (allowKeys.indexOf(e.keyCode) !== -1 || (e.ctrlKey === true && e.keyCode == 65)) {
+  // Allow keys: backspace, end, home, left, right, delete and Ctrl+A or Ctrl+C
+  if ([8, 35, 36, 37, 39, 46].indexOf(e.keyCode) !== -1 || (e.ctrlKey === true && [65, 86].indexOf(e.keyCode) !== -1)) {
     return;
   }
   // Ensure that it is a number and stop the keypress
   if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
     e.preventDefault();
   }
+};
+
+// Width Input
+qtyEl.onblur = function () {
+  changeWidth(qtyEl.value);
 };
