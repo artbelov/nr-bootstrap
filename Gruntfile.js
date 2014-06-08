@@ -111,7 +111,7 @@ module.exports = function (grunt) {
   });
 
   // These plugins provide necessary tasks.
-  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
   require('time-grunt')(grunt);
 
   // Default task for locally tests and compile the CSS.
