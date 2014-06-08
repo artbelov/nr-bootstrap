@@ -28,7 +28,7 @@
     "url": "http://opensource.org/licenses/MIT"
   },
   "engines": {
-    "node": ">= 0.10.1"
+    "node": "~0.10.1"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
@@ -38,9 +38,9 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-less": "~0.11.1",
-    "grunt-autoprefixer": "~0.7.3",
+    "grunt-autoprefixer": "~0.7.4",
     "grunt-contrib-csslint": "~0.2.0",
     "load-grunt-tasks": "~0.4.0",
-    "time-grunt": "~0.3.1"
+    "time-grunt": "~0.3.2"
   }
 }
