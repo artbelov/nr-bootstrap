@@ -107,7 +107,6 @@ module.exports = function (grunt) {
         'css/bootstrap.css'
       ]
     }
-
   });
 
   // These plugins provide necessary tasks.

@@ -6,8 +6,8 @@
 
 ### Quick start
 
-1. Clone the repository or download it in ZIP.
-2. Add or replace CSS/LESS files in your project.
+1. [Download](https://github.com/artbelov/nr-bootstrap/archive/master.zip) or clone the repository.
+2. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
 3. [Override width](#override-width-of-container) of `.container`  in `variables.less` or `bootstrap.css`.
 4. Use only `col-*` grid classes.
 
@@ -49,10 +49,6 @@ Task for run tests locally and compile the CSS.
 #### Watch – `grunt watch`
 
 Task for watching LESS files and automatically building them on save.
-
-#### Update – `grunt update`
-
-Task for updating packages of the node package manager.
 
 ### Thanks
 
