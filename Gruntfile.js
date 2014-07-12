@@ -115,5 +115,4 @@ module.exports = function (grunt) {
 
   // Default task for locally tests and compile the CSS.
   grunt.registerTask('default', ['less:core', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
-
 };
