@@ -2,9 +2,6 @@
  * Non-responsive Bootstrap's Gruntfile
  */
 
-/* jshint node: true */
-/* global module */
-
 module.exports = function (grunt) {
   'use strict';
 

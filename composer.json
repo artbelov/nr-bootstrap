@@ -1,7 +1,6 @@
 {
   "name": "artbelov/nr-bootstrap",
   "description": "Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid layout.",
-  "homepage": "http://www.artbelov.com/nr-bootstrap/",
   "keywords": [
     "css",
     "js",
@@ -12,6 +11,7 @@
     "framework",
     "web"
   ],
+  "homepage": "www.artbelov.com/nr-bootstrap",
   "authors": [
     {
       "name": "Artem Belov",

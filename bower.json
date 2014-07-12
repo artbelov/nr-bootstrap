@@ -22,7 +22,7 @@
     "css/bootstrap.css"
   ],
   "ignore": [
-    ".*",
+    "/.*",
     "composer.json",
     "Gruntfile.js",
     "package.json"
