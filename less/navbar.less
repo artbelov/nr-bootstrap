@@ -10,37 +10,13 @@
 
 .navbar {
   position: relative;
-  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  min-height: @navbar-height; // Ensure a navbar always shows
   margin-bottom: @navbar-margin-bottom;
   border: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
   border-radius: @navbar-border-radius;
-}
-
-
-// Navbar heading
-//
-// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
-// styling of responsive aspects.
-
-.navbar-header {
-  &:extend(.clearfix all);
-  float: left;
-}
-
-
-// Both navbar header and collapse
-//
-// When a container is present, change the behavior of the header and collapse.
-
-.container,
-.container-fluid {
-  > .navbar-header {
-    margin-right: 0;
-    margin-left:  0;
-  }
 }
 
 
@@ -114,7 +90,6 @@
     line-height: @line-height-computed;
   }
 
-  // Uncollapse the nav
   float: left;
   margin: 0;
 
@@ -135,8 +110,7 @@
 // Component alignment
 //
 // Repurpose the pull utilities as their own navbar utilities to avoid specificity
-// issues with parents and chaining. Only do this when the navbar is uncollapsed
-// though so that navbar contents properly stack and align in mobile.
+// issues with parents and chaining.
 .navbar-left  { .pull-left(); }
 .navbar-right { .pull-right(); }
 
@@ -267,17 +241,6 @@
     }
   }
 
-  .navbar-toggle {
-    border-color: @navbar-default-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: @navbar-default-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: @navbar-default-toggle-icon-bar-bg;
-    }
-  }
-
   .navbar-form {
     border-color: @navbar-default-border;
   }
@@ -353,18 +316,6 @@
         color: @navbar-inverse-link-disabled-color;
         background-color: @navbar-inverse-link-disabled-bg;
       }
-    }
-  }
-
-  // Darken the responsive nav toggle
-  .navbar-toggle {
-    border-color: @navbar-inverse-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: @navbar-inverse-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: @navbar-inverse-toggle-icon-bar-bg;
     }
   }
 

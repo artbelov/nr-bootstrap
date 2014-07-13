@@ -18,9 +18,9 @@
 
 ### Default values ​​of extra LESS variables
 
-[Container width](https://github.com/artbelov/nr-bootstrap/blob/master/less/variables.less#L304): ((970px + @grid-gutter-width));
+Container width: ((970px + @grid-gutter-width));
 
-[Glyphicons path](https://github.com/artbelov/nr-bootstrap/blob/master/less/variables.less#L75): "../fonts/";
+Glyphicons path: "../fonts/";
 
 ### Override width of container
 

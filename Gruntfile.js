@@ -1,5 +1,7 @@
 /*!
  * Non-responsive Bootstrap's Gruntfile
+ * http://www.artbelov.com/nr-bootstrap
+ * Licensed under MIT
  */
 
 module.exports = function (grunt) {
@@ -26,6 +28,10 @@ module.exports = function (grunt) {
       ' */\n',
 
     // Task configuration.
+    clean: {
+      core: ['css']
+    },
+
     less: {
       core: {
         options: {
@@ -111,5 +117,5 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task for locally tests and compile the CSS.
-  grunt.registerTask('default', ['less:core', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
+  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
 };
