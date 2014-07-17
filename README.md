@@ -40,16 +40,6 @@ Glyphicons path: `../fonts/`
 1. Create your own `.css` file or `<style>` tag, which is placed after `bootstrap.css`.
 2. Override `.container` width, for example, `.container { width: 1140px !important; }`.
 
-### Available Grunt commands
-
-#### Build – `grunt`
-
-Task for run tests locally and compile the CSS.
-
-#### Watch – `grunt watch`
-
-Task for watching LESS files and automatically building them on save.
-
 ### Thanks
 
 [Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
