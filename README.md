@@ -18,9 +18,9 @@
 
 ### Default values ​​of extra LESS variables
 
-Container width: `((970px + @grid-gutter-width));`
+Container width: `1000px`
 
-Glyphicons path: `"../fonts/";`
+Glyphicons path: `../fonts/`
 
 ### Override width of container
 
