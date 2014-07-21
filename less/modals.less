@@ -15,8 +15,7 @@
 // Container that the modal scrolls within
 .modal {
   display: none;
-  overflow: auto;
-  overflow-y: scroll;
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -31,17 +30,21 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    .translate(0, -25%);
+    .translate3d(0, -25%, 0);
     .transition-transform(~"0.3s ease-out");
   }
-  &.in .modal-dialog { .translate(0, 0)}
+  &.in .modal-dialog { .translate3d(0, 0, 0) }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
-  width: @modal-md;
-  margin: 30px auto;
+  width: auto;
+  margin: 10px;
 }
 
 // Actual modal
@@ -51,10 +54,10 @@
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
   border-radius: @border-radius-large;
-  .box-shadow(0 5px 15px rgba(0,0,0,.5));
+  .box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
-  outline: none;
+  outline: 0;
 }
 
 // Modal background
@@ -98,8 +101,7 @@
 
 // Footer (for actions)
 .modal-footer {
-  margin-top: 15px;
-  padding: (@modal-inner-padding - 1) @modal-inner-padding @modal-inner-padding;
+  padding: @modal-inner-padding;
   text-align: right; // right align buttons
   border-top: 1px solid @modal-footer-border-color;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
@@ -117,6 +119,24 @@
   .btn-block + .btn-block {
     margin-left: 0;
   }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+// Automatically set modal's width for larger viewports
+.modal-dialog {
+  width: @modal-md;
+  margin: 30px auto;
+}
+.modal-content {
+  .box-shadow(0 5px 15px rgba(0,0,0,.5));
 }
 
 // Modal sizes

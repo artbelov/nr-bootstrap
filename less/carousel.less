@@ -28,7 +28,9 @@
 
   > .active,
   > .next,
-  > .prev { display: block; }
+  > .prev {
+    display: block;
+  }
 
   > .active {
     left: 0;
@@ -91,11 +93,12 @@
   // Hover/focus state
   &:hover,
   &:focus {
-    outline: none;
+    outline: 0;
     color: @carousel-control-color;
     text-decoration: none;
     .opacity(.9);
   }
+
 
   // Toggles
   .icon-prev,
@@ -106,24 +109,29 @@
     top: 50%;
     z-index: 5;
     display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    font-size: 30px;
   }
   .icon-prev,
   .glyphicon-chevron-left {
     left: 50%;
+    margin-left: -15px;
   }
   .icon-next,
   .glyphicon-chevron-right {
     right: 50%;
+    margin-right: -15px;
   }
   .icon-prev,
   .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    margin-left: -15px;
-    font-size: 30px;
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
     font-family: serif;
   }
+
 
   .icon-prev {
     &:before {
@@ -189,10 +197,10 @@
   position: absolute;
   left: 20%;
   right: 20%;
-  padding-bottom: 30px;
   bottom: 20px;
   z-index: 10;
   padding-top: 20px;
+  padding-bottom: 30px;
   color: @carousel-caption-color;
   text-align: center;
   text-shadow: @carousel-text-shadow;
