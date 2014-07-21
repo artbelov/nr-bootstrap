@@ -38,6 +38,7 @@
   margin: 2px 0 0; // override default ul
   list-style: none;
   font-size: @font-size-base;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: @dropdown-bg;
   border: 1px solid @dropdown-fallback-border; // IE8 fallback
   border: 1px solid @dropdown-border;
@@ -142,9 +143,6 @@
 //
 // This is only for left-aligning a dropdown menu within a `.navbar-right` or
 // `.pull-right` nav component.
-//
-// Necessary for overrides of the default right aligned menu.
-// Will remove come v4 in all likelihood.
 .dropdown-menu-left {
   left: 0;
   right: auto;
@@ -157,6 +155,7 @@
   font-size: @font-size-small;
   line-height: @line-height-base;
   color: @dropdown-header-color;
+  white-space: nowrap; // as with > li > a
 }
 
 // Backdrop to catch body clicks on mobile, etc.
@@ -193,18 +192,5 @@
     top: auto;
     bottom: 100%;
     margin-bottom: 1px;
-  }
-}
-
-
-// Component alignment
-//
-// Reiterate per navbar.less and the modified component alignment there.
-.navbar-right {
-  .dropdown-menu {
-    .dropdown-menu-right();
-  }
-  .dropdown-menu-left {
-    .dropdown-menu-left();
   }
 }
