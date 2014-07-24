@@ -1,6 +1,7 @@
 # [Non-responsive Bootstrap](http://www.artbelov.com/nr-bootstrap/)
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](http://img.shields.io/travis/artbelov/nr-bootstrap/master.svg)](https://travis-ci.org/artbelov/nr-bootstrap) [![devDependency Status](https://david-dm.org/artbelov/nr-bootstrap/dev-status.png?theme=shields.io)](https://david-dm.org/artbelov/nr-bootstrap#info=devDependencies)
+[![Build Status](https://secure.travis-ci.org/artbelov/nr-bootstrap.svg?branch=master)](http://travis-ci.org/artbelov/nr-bootstrap)
+[![devDependency Status](https://david-dm.org/artbelov/nr-bootstrap/dev-status.svg)](https://david-dm.org/artbelov/nr-bootstrap#info=devDependencies)
 
 **[Bootstrap](https://github.com/twbs/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.**
 
