@@ -1,5 +1,6 @@
 # [Non-responsive Bootstrap](http://www.artbelov.com/nr-bootstrap/)
 
+[![Bower version](https://badge.fury.io/bo/nr-bootstrap.svg)](http://badge.fury.io/bo/nr-bootstrap)
 [![Build Status](https://secure.travis-ci.org/artbelov/nr-bootstrap.svg?branch=master)](http://travis-ci.org/artbelov/nr-bootstrap)
 [![devDependency Status](https://david-dm.org/artbelov/nr-bootstrap/dev-status.svg)](https://david-dm.org/artbelov/nr-bootstrap#info=devDependencies)
 
