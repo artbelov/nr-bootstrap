@@ -1,7 +1,7 @@
 {
   "name": "nr-bootstrap",
   "description": "Bootstrap front-end framework without responsiveness, which can be used with fixed or fluid layout.",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "keywords": [
     "css",
     "js",
@@ -13,9 +13,7 @@
     "web"
   ],
   "author": "Artem Belov",
-  "homepage": "http://www.artbelov.com/nr-bootstrap/",
-  "style": "css/bootstrap.css",
-  "less": "less/bootstrap.less",
+  "homepage": "http://www.artbelov.com/nr-bootstrap",
   "repository": {
     "type": "git",
     "url": "git://github.com/artbelov/nr-bootstrap"
@@ -27,20 +25,20 @@
     "type": "MIT",
     "url": "http://opensource.org/licenses/MIT"
   },
-  "engines": {
-    "node": "~0.10.1"
-  },
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~0.8.1",
+    "grunt-autoprefixer": "~0.8.2",
     "grunt-banner": "~0.2.3",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-csslint": "~0.2.0",
     "grunt-contrib-cssmin": "0.10.0",
     "grunt-contrib-less": "~0.11.3",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-csscomb": "~2.0.1",
+    "grunt-csscomb": "~3.0.0",
     "load-grunt-tasks": "~0.6.0",
     "time-grunt": "~0.4.0"
+  },
+  "engines": {
+    "node": "~0.10.1"
   }
 }

@@ -1,9 +1,8 @@
 /*!
  * Non-responsive Bootstrap's Gruntfile
+ * http://www.artbelov.com/nr-bootstrap
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
-
-/* jshint node: true */
-/* global module */
 
 module.exports = function (grunt) {
   'use strict';
@@ -29,10 +28,15 @@ module.exports = function (grunt) {
       ' */\n',
 
     // Task configuration.
+    clean: {
+      dist: ['assets/css']
+    },
+
     less: {
-      docs: {
+      dist: {
         options: {
           strictMath: true,
+          sourceMap: false,
           outputSourceFiles: true
         },
         files: {
@@ -41,21 +45,34 @@ module.exports = function (grunt) {
       }
     },
 
-    watch: {
-      less: {
-        files: [
-          'assets/less/*.less'
-        ],
-        tasks: 'default'
+    autoprefixer: {
+      options: {
+        browsers: [
+          'Android 2.3',
+          'Android >= 4',
+          'Chrome >= 20',
+          'Firefox >= 24',
+          'Explorer >= 8',
+          'iOS >= 6',
+          'Opera >= 12',
+          'Safari >= 6'
+        ]
+      },
+      dist: {
+        options: {
+          map: false
+        },
+        src: 'assets/css/main.css'
       }
     },
 
-    autoprefixer: {
+    usebanner: {
       options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+        position: 'top',
+        banner: '<%= banner %>'
       },
-      docs: {
-        src: 'assets/css/main.css'
+      dist: {
+        src: 'assets/css/*.css'
       }
     },
 
@@ -63,20 +80,20 @@ module.exports = function (grunt) {
       options: {
         config: 'assets/less/.csscomb.json'
       },
-      css: {
-        expand: true,
-        cwd: 'assets/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'assets/css/'
+      dist: {
+        files: {
+          'assets/css/main.css': 'assets/css/main.css'
+        }
       }
     },
 
     cssmin: {
       options: {
         compatibility: 'ie8',
-        keepSpecialComments: '*'
+        keepSpecialComments: '*',
+        noAdvanced: true
       },
-      core: {
+      dist: {
         files: {
           'assets/css/main.min.css': 'assets/css/main.css'
         }
@@ -87,20 +104,19 @@ module.exports = function (grunt) {
       options: {
         csslintrc: 'assets/less/.csslintrc'
       },
-      src: [
-        'assets/css/main.css'
-      ]
-    }
+      dist: ['assets/css/main.css']
+    },
 
+    watch: {
+      files: ['assets/less/*.less'],
+      tasks: 'default'
+    }
   });
 
   // These plugins provide necessary tasks.
-  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
+  require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
   // Default task for locally tests and compile the CSS.
-  grunt.registerTask('default', ['less:docs', 'autoprefixer', 'csscomb', 'cssmin', 'csslint']);
-
-  // Task for watching Less files and automatically building them on save.
-  grunt.registerTask('watch', ['watch']);
+  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin', 'csslint']);
 };
