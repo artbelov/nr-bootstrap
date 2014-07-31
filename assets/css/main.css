@@ -1,122 +1,100 @@
+/*!
+ * Non-responsive Bootstrap v3.2.0
+ * Homepage: http://www.artbelov.com/nr-bootstrap
+ * Based on Bootstrap (http://getbootstrap.com)
+ * Copyright 2014 Artem Belov
+ * Licensed under MIT (http://opensource.org/licenses/MIT)
+ */
+
 /**
  * Global
  */
 html,
-body
-{
-    height: 100%;
-
-    background-color: #fff;
+body {
+  height: 100%;
+  background-color: #fff;
 }
 /**
  * Default Width
  */
 #mastfoot,
-#cover-container
-{
-    width: 970px;
+#cover-container {
+  width: 970px;
 }
 /**
  * Wrapper
  */
-.site-wrapper
-{
-    display: table;
-
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
 }
-.site-wrapper-inner
-{
-    display: table-cell;
-
-    vertical-align: top;
-    vertical-align: middle;
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+  vertical-align: middle;
 }
-#cover-container
-{
-    margin-right: auto;
-    margin-left: auto;
+#cover-container {
+  margin-right: auto;
+  margin-left: auto;
 }
 /**
  * Jumbotron
  */
-.cover
-{
-    padding: 10px 30px 30px;
-
-    text-align: center;
-
-    color: #fff;
-    border-radius: 4px;
-    background-color: #084a86;
+.cover {
+  padding: 10px 30px 30px;
+  color: #fff;
+  text-align: center;
+  background-color: #084a86;
+  border-radius: 4px;
 }
-.cover #qty
-{
-    font-size: 20px;
-
-    text-align: center;
+.cover #qty {
+  font-size: 20px;
+  text-align: center;
 }
-.cover h1
-{
-    font-size: 72px;
-    font-weight: bold;
+.cover h1 {
+  font-size: 72px;
+  font-weight: bold;
 }
-.cover .lead
-{
-    font-size: 30px;
-
-    padding: 15px 0;
+.cover .lead {
+  padding: 15px 0;
+  font-size: 30px;
 }
-.cover .btn-lg
-{
-    font-size: 20px;
-    font-weight: bold;
-
-    padding: 15px 51px;
-
-    color: #fff;
-    background-color: #084a86;
+.cover .btn-lg {
+  padding: 15px 51px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #084a86;
 }
-.cover .version
-{
-    font-size: 12px;
-
-    margin: 10px auto 0;
-
-    color: #ccc;
+.cover .version {
+  margin: 10px auto 0;
+  font-size: 12px;
+  color: #ccc;
 }
-.cover .change-width-form
-{
-    width: 140px;
-    margin: 30px auto 0;
+.cover .change-width-form {
+  width: 140px;
+  margin: 30px auto 0;
 }
 .cover .btn-lg:hover,
-.cover .btn-lg:focus
-{
-    color: #084a86;
-    background-color: #fff;
+.cover .btn-lg:focus {
+  color: #084a86;
+  background-color: #fff;
 }
 /**
  * Footer
  */
-#mastfoot
-{
-    font-size: 16px;
-    font-weight: bold;
-
-    position: fixed;
-    bottom: 0;
-
-    padding: 15px 0;
-
-    text-align: center;
-
-    color: #6a758f;
+#mastfoot {
+  position: fixed;
+  bottom: 0;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6a758f;
+  text-align: center;
 }
 #mastfoot a:hover,
-#mastfoot a:focus
-{
-    color: #084a86;
+#mastfoot a:focus {
+  color: #084a86;
 }
