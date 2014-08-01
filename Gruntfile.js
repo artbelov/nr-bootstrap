@@ -42,7 +42,7 @@ module.exports = function (grunt) {
           sourceMapFilename: 'css/bootstrap.css.map'
         },
         files: {
-          'css/bootstrap.css': ['less/bootstrap.less']
+          'css/bootstrap.css': 'less/bootstrap.less'
         }
       }
     },
@@ -106,11 +106,11 @@ module.exports = function (grunt) {
       options: {
         csslintrc: 'less/.csslintrc'
       },
-      dist: ['css/bootstrap.css']
+      dist: 'css/bootstrap.css'
     },
 
     watch: {
-      files: ['less/*.less'],
+      files: 'less/**/*.less',
       tasks: 'default'
     }
   });
