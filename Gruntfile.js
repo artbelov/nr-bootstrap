@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['assets/css']
+      dist: 'assets/css'
     },
 
     less: {
@@ -37,10 +37,10 @@ module.exports = function (grunt) {
         options: {
           strictMath: true,
           sourceMap: false,
-          outputSourceFiles: true
+          outputSourceFiles: false
         },
         files: {
-          'assets/css/main.css': ['assets/less/main.less']
+          'assets/css/main.css': 'assets/less/main.less'
         }
       }
     },
@@ -104,11 +104,11 @@ module.exports = function (grunt) {
       options: {
         csslintrc: 'assets/less/.csslintrc'
       },
-      dist: ['assets/css/main.css']
+      dist: 'assets/css/main.css'
     },
 
     watch: {
-      files: ['assets/less/*.less'],
+      files: 'assets/less/*.less',
       tasks: 'default'
     }
   });
