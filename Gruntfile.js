@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['css']
+      dist: 'css'
     },
 
     less: {
