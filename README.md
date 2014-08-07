@@ -8,10 +8,16 @@
 
 ### Quick start
 
-1. [Download](https://github.com/artbelov/nr-bootstrap/archive/master.zip) or clone the repository.
-2. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
-3. [Override width](#override-width-of-container) of `.container`  in `variables.less` or `bootstrap.css`.
-4. Use only `col-*` grid classes.
+Three quick start options are available:
+
+- [Download the latest release](https://github.com/artbelov/nr-bootstrap/releases/download/v3.2.0/nr-bootstrap-v3.2.0-css.zip).
+- Clone the repo: `git clone https://github.com/artbelov/nr-bootstrap.git`.
+- Install with [Bower](http://bower.io/): `bower install nr-bootstrap`.
+
+### Usage
+1. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
+2. [Override width](#override-width-of-container) of `.container`  in `variables.less` or `bootstrap.css`.
+3. Use only `col-*` grid classes.
 
 ### Recommendations
 
