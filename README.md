@@ -6,20 +6,17 @@
 
 [Bootstrap](https://github.com/twbs/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.
 
-### Quick start
+## Quick start options
 
-Quick start options:
-
-- Clone the repo: `git clone https://github.com/artbelov/nr-bootstrap.git`.
 - Download the latest [build](https://github.com/artbelov/nr-bootstrap/archive/master.zip) or [release](https://github.com/artbelov/nr-bootstrap/releases/download/v3.2.0/nr-bootstrap-v3.2.0-css.zip).
+- Clone the repo: `git clone https://github.com/artbelov/nr-bootstrap.git`.
 - Install with [Bower](http://bower.io/): `bower install nr-bootstrap`. *(Note: will also be installed Glyphicons)*
 
-### Usage
+## Usage
 1. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
-2. Use only `col-*` grid classes.
-3. Don't use navbar collapsing and expanding behavior.
+2. Use only `col-*` grid classes. *(Note: Don't use navbar collapsing)*
 
-### Override width of container
+## Override width of container
 
 **In `bootstrap.css`:**
 
@@ -35,13 +32,13 @@ Quick start options:
 **In own styles:**
 
 1. Create your own `.css` file or `<style>` tag, which is placed after `bootstrap.css`.
-2. Create `.container` with `width` property, for example, `.container { width: 1140px !important; }`.
+2. Create `.container` with `width` property, for example, `.container { width: 1140px !important }`.
 
-### Thanks
+## Thanks
 
 [Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
-### Author
+## Author
 
 **Artem Belov**
 
@@ -49,6 +46,6 @@ Quick start options:
 - <https://twitter.com/belov>
 - <http://github.com/artbelov>
 
-### License
+## License
 
 Code released under [the MIT license](http://opensource.org/licenses/MIT).
