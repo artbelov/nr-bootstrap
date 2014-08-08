@@ -4,49 +4,38 @@
 [![Build Status](https://secure.travis-ci.org/artbelov/nr-bootstrap.svg?branch=master)](http://travis-ci.org/artbelov/nr-bootstrap)
 [![devDependency Status](https://david-dm.org/artbelov/nr-bootstrap/dev-status.svg)](https://david-dm.org/artbelov/nr-bootstrap#info=devDependencies)
 
-**[Bootstrap](https://github.com/twbs/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.**
+[Bootstrap](https://github.com/twbs/bootstrap) front-end framework without responsiveness, which can be used with fixed or fluid layout.
 
 ### Quick start
 
-Three quick start options are available:
+Quick start options:
 
-- [Download the latest release](https://github.com/artbelov/nr-bootstrap/releases/download/v3.2.0/nr-bootstrap-v3.2.0-css.zip).
 - Clone the repo: `git clone https://github.com/artbelov/nr-bootstrap.git`.
-- Install with [Bower](http://bower.io/): `bower install nr-bootstrap`.
+- Download the latest [build](https://github.com/artbelov/nr-bootstrap/archive/master.zip) or [release](https://github.com/artbelov/nr-bootstrap/releases/download/v3.2.0/nr-bootstrap-v3.2.0-css.zip).
+- Install with [Bower](http://bower.io/): `bower install nr-bootstrap`. *(Note: will also be installed Glyphicons)*
 
 ### Usage
 1. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
-2. [Override width](#override-width-of-container) of `.container`  in `variables.less` or `bootstrap.css`.
-3. Use only `col-*` grid classes.
-
-### Recommendations
-
-* Remove all navbar collapsing and expanding behavior.
-* Remove the viewport `<meta>` tag from `<head>` section.
-
-### Default values ​​of extra LESS variables
-
-Container width: `1000px`
-
-Glyphicons path: `../fonts/`
+2. Use only `col-*` grid classes.
+3. Don't use navbar collapsing and expanding behavior.
 
 ### Override width of container
 
 **In `bootstrap.css`:**
 
 1. Open `bootstrap.css` file.
-2. Find and change `width` of the `.container`.
+2. Change `width` of the `.container`.
 
 **In `variables.less`:**
 
 1. Open `variables.less` file.
-2. Find and change `@container-default` variable.
+2. Change `@container-default` value.
 3. Compile `bootstrap.less` file.
 
 **In own styles:**
 
 1. Create your own `.css` file or `<style>` tag, which is placed after `bootstrap.css`.
-2. Override `.container` width, for example, `.container { width: 1140px !important; }`.
+2. Create `.container` with `width` property, for example, `.container { width: 1140px !important; }`.
 
 ### Thanks
 
