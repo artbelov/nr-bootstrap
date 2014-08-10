@@ -8,22 +8,22 @@
 
 ## Quick start options
 
-- Download the latest [build](https://github.com/artbelov/nr-bootstrap/archive/master.zip) or [release](https://github.com/artbelov/nr-bootstrap/releases/download/v3.2.0/nr-bootstrap-v3.2.0-css.zip).
 - Clone the repo: `git clone https://github.com/artbelov/nr-bootstrap.git`.
-- Install with [Bower](http://bower.io/): `bower install nr-bootstrap`. *(Note: will also be installed Glyphicons)*
+- Download the latest [build](https://github.com/artbelov/nr-bootstrap/archive/master.zip) or [release](https://github.com/artbelov/nr-bootstrap/releases/download/v3.2.0/nr-bootstrap-v3.2.0-css.zip).
+- Install with [Bower](http://bower.io/): `bower install nr-bootstrap`.
 
 ## Usage
 1. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
 2. Use only `col-*` grid classes. *(Note: Don't use navbar collapsing)*
 
-## Override width of container
+## Override container width
 
-**In `bootstrap.css`:**
+**In CSS:**
 
 1. Open `bootstrap.css` file.
 2. Change `width` of the `.container`.
 
-**In `variables.less`:**
+**In LESS:**
 
 1. Open `variables.less` file.
 2. Change `@container-default` value.
