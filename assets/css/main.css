@@ -6,24 +6,15 @@
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
 
-/**
- * Global
- */
 html,
 body {
   height: 100%;
   background-color: #fff;
 }
-/**
- * Default Width
- */
 #mastfoot,
 #cover-container {
   width: 970px;
 }
-/**
- * Wrapper
- */
 .site-wrapper {
   display: table;
   width: 100%;
@@ -32,16 +23,11 @@ body {
 }
 .site-wrapper-inner {
   display: table-cell;
-  vertical-align: top;
   vertical-align: middle;
 }
 #cover-container {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
-/**
- * Jumbotron
- */
 .cover {
   padding: 10px 30px 30px;
   color: #fff;
@@ -82,9 +68,6 @@ body {
   color: #084a86;
   background-color: #fff;
 }
-/**
- * Footer
- */
 #mastfoot {
   position: fixed;
   bottom: 0;
