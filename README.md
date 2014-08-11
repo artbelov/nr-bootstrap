@@ -14,7 +14,8 @@
 
 ## Usage
 1. Add or replace [CSS](https://github.com/artbelov/nr-bootstrap/tree/master/css)/[LESS](https://github.com/artbelov/nr-bootstrap/tree/master/less) files in your project.
-2. Use only `col-*` grid classes. *(Note: Don't use navbar collapsing)*
+2. Use only `col-*` grid classes.
+3. Don't use navbar collapsing.
 
 ## Override container width
 
@@ -31,8 +32,8 @@
 
 **In own styles:**
 
-1. Create your own `.css` file or `<style>` tag, which is placed after `bootstrap.css`.
-2. Create `.container` with `width` property, for example, `.container { width: 1140px !important }`.
+1. Create your own `.css`, `.less` or `<style>` tag, which is used after `bootstrap.css`.
+2. Create `.container` and set `width` property, e.g. `.container { width: 1140px !important; }`.
 
 ## Thanks
 
@@ -44,7 +45,6 @@
 
 - <http://www.artbelov.com>
 - <https://twitter.com/belov>
-- <http://github.com/artbelov>
 
 ## License
 
