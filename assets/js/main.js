@@ -16,7 +16,6 @@ var step = 10,
   coverContainerEl = document.getElementById('cover-container'),
   mastFootEl = document.getElementById('mastfoot');
 
-
 // Set Maximum Container Width
 if (screenWidth < maxVal) {
   maxVal = Math.floor(screenWidth / 100) * 100 - scrollBar;
@@ -30,11 +29,10 @@ var changeWidth = (function (width, btn, icon) {
     coverContainerEl.setAttribute('style', 'width:' + width + 'px');
     mastFootEl.setAttribute('style', 'width:' + width + 'px');
   });
-  // If is Number
   if (!isNaN(width)) {
-    if ((btn == 'qtyplus' || icon == 'qtyplus') && width < maxVal) {
+    if ((btn === 'qtyplus' || icon === 'qtyplus') && width < maxVal) {
       setVal(width + step);
-    } else if ((btn == 'qtyminus' || icon == 'qtyminus') && width > minVal) {
+    } else if ((btn === 'qtyminus' || icon === 'qtyminus') && width > minVal) {
       setVal(width - step);
     } else if (width > maxVal) {
       setVal(maxVal);
