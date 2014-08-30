@@ -41,9 +41,8 @@ module.exports = function (grunt) {
           sourceMapURL: 'bootstrap.css.map',
           sourceMapFilename: 'css/bootstrap.css.map'
         },
-        files: {
-          'css/bootstrap.css': 'less/bootstrap.less'
-        }
+        src: 'less/bootstrap.less',
+        dest: 'css/bootstrap.css'
       }
     },
 
@@ -83,9 +82,8 @@ module.exports = function (grunt) {
         config: 'less/.csscomb.json'
       },
       dist: {
-        files: {
-          'css/bootstrap.css': 'css/bootstrap.css'
-        }
+        src: 'css/bootstrap.css',
+        dest: 'css/bootstrap.css'
       }
     },
 
